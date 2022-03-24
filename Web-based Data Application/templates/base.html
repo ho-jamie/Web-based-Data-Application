@@ -1,0 +1,43 @@
+<!DOCTYPE html">
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style_advance.css') }}" type="text/css" media="all" />
+<script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+</head>
+
+<body>
+
+    <div id="shell" height=auto>
+        <div id="header">
+          <h1 class="title"><a href="/">JOB SEEKER</a></h1>
+          <div class="top-bar">
+            <div class="links">    {% block links %}       {% endblock %}  </div>
+            <div class="cl">&nbsp;</div>
+            <div id="search">
+              <form action="/search" method="POST">
+                <label for="search-string">I'M LOOKING FOR</label>
+                <div class="fields">
+                  <input type="text" name="searchword" class="field" />
+                  <input type="submit" name="search" value="" class="submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+{% include "navbar.html" %}
+      
+        {% block body %}
+        {% endblock %}
+        
+        <div id="footer" style='height:auto'>
+          <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+          <p class="rf">Design by <a href="http://chocotemplates.com/">ChocoTemplates.com</a></p>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+{% block script %}
+{% endblock %}
+
+</body>
+</html>

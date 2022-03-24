@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styleNav.scss') }}" type="text/css" media="all" />
+<script src="{{ url_for('static', filename='scriptNavigation.js') }}"></script>
+<section class="navigation">
+  <div class="nav-container">
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+        <li><a href="/">HOME</a></li>
+        <li><a href="#!">JOB TYPES</a>
+          <ul class="nav-dropdown">
+            <li><a href="/Accounting_Finance">ACCOUNTING FINANCE</a></li>
+            <li><a href="/Engineering">ENGINEERING</a></li>
+            <li><a href="/Healthcare_Nursing">HEALTHCARE NURSING</a></li>
+            <li><a href="/Hospitality_Catering">HOSPITALITY CATERING</a></li>
+            <li><a href="/IT">IT</a></li>
+            <li><a href="/PR_Advertising_Marketing">PR ADVERTISING MARKETING</a></li>
+            <li><a href="/Sales">SALES</a></li>
+            <li><a href="/Teaching">TEACHING</a></li>
+          </ul>
+        <li><a href="/admin">EMPLOYERS</a></li>
+
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>

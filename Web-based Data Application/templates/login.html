@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block links %}
+
+{% endblock %}
+
+{% block body %}
+
+<div id="main" style='height: auto'>
+  <div id="content" style='height: auto'>
+    <div class="box" style='height: auto'>
+      <h2><span>LOG IN</span></h2>
+      <div class="cl">&nbsp;</div>
+      <div class="cl">&nbsp;</div>
+
+      <div class="log-in" style='height: auto'>
+          <h3 class="title">Login</h3>
+          <div class="box" style='height: auto'>
+              <form method="POST" action="/login">
+                  <div class="field">
+                      <div class="control">
+                          <label for="file">Username</label>
+                          <div class="cl">&nbsp;</div>
+                          <input type="text" name="username"  autofocus="">
+                      </div>
+                  </div>
+      
+                  <div class="field">
+                      <div class="control">
+                          <label for="file">Password</label>
+                          <div class="cl">&nbsp;</div>
+                          <input type="password" name="password">
+                      </div>
+                  </div>
+                  {{ login_message }}
+                  <div class="cl">&nbsp;</div>
+                  <div class="cl">&nbsp;</div>
+                  <button> Login</button>
+              </form>
+          </div>
+      </div>
+
+    </div>
+    <div class="cl">&nbsp;</div>
+  </div>
+  <div class="cl">&nbsp;</div>
+</div>
+
+  {% endblock %}
+

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block links %}
+<a href="/logout" >LOGOUT</a>
+{% endblock %}
+
+{% block body %}
+
+  <div id="main" style='height: auto'>
+    <div id="content" style='height: auto'>
+      <div class="box" style='height: auto'>
+        <h2><span>ADD JOB ENTRY</span></h2>
+        <div class="cl">&nbsp;
+
+      </div>
+
+      <div class="contact-form" height=auto>
+        <form action="/admin" method="post" enctype="multipart/form-data" height=auto>
+          <div class="fields">
+            <label for="file">Title</label>
+            <input type="text" name="title" value="{{ title }}" required>
+            <div class="cl">&nbsp;</div> 
+            <label for = "file">Salary</label>
+            <input type="text" name="salary" value="{{ salary }}" required>
+            <div class="cl">&nbsp;</div> 
+          <label for="file">Description</label>
+            <textarea type="text" name="description" style="height:200px" required> {{ description }} </textarea>
+            <div class="cl">&nbsp;</div> 
+            <label for="file">Recommended Category</label>
+            <input type="text" name="category" value="{{ prediction }}">
+            <p style="color:red"> {{ category_flag }} </p>
+          </div>
+          <input type="submit" name="button" value="Classify">
+          <input type="submit" name="button" value="Save">
+        </form>
+      </div>
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+  {% endblock %}
+
