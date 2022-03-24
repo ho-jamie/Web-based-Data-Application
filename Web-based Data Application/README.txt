@@ -1,4 +1,4 @@
-reference used:
+Reference used:
 “Responsive Dropdown Navigation Bar” 2021, CodePen, viewed 15 October 2021, https://codepen.io/kotasowa/pen/zNreoN.
 
 Necessary file needed for classification:
